@@ -1,0 +1,41 @@
+/*
+ * This file does the styling for the content.js file.
+ * All these values were retrieved from div class="boxy quick down" from the Archive Website, the goal is to mimics that look.
+ */
+ 
+#iaPlugInBox
+{
+	padding: 15px;
+	margin-bottom: 10px;
+	background-color: RGBA(216,216,216,0.33);
+	box-shadow: 1px 1px 2px RGBA(0,0,0,0.33);
+	padding:11px 20px 16px 20px;
+}
+
+#boxTitle
+{
+	min-height:48px;
+	font-size:14px;
+	font-weight:bold;
+	padding: 15px;
+	padding-left: 0px;
+	border-bottom:1px solid RGBA(0,0,0,0.2);
+	margin-bottom: 5px;
+}
+
+#allMusicButton
+{
+	
+}
+
+#plugInLink
+{
+	color: #428BCA;
+	border-bottom:1px solid RGBA(0,0,0,0.2);
+	padding-bottom:5px;
+	margin-bottom:5px;
+}
+#plugInLink:hover
+{
+	cursor: pointer;
+}

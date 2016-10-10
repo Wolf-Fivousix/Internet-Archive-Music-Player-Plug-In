@@ -1,0 +1,38 @@
+{
+	"manifest_version": 2,
+	"name": "Internet Archive BETA Music Player",
+	"short_name": "IntArcBETA",
+	"description": "Player for the Internet Archive music pages.",
+	"version": "0.7",
+	"offline_enabled": false, // Since we stream the music content, Plug-In should not work in offline mode.
+	"icons":
+	{
+		"16": "Images/icon.png",
+		"32": "Images/icon.png",
+		"128": "Images/icon.png"
+	},
+	"background":
+	{
+		"page": "background.html",
+		"persistent": true		// Do a test with "false" before finishing BETA.
+	},
+	"browser_action":
+	{
+		"default_icon": "Images/icon.png",
+		"default_popup": "popup.html",
+		"default_title": "Internet Archive BETA Music Player"
+	},
+	"content_scripts":
+	[{
+		"matches": ["http://archive.org/*",
+					"https://archive.org/*"],
+		"js": ["content.js"],
+		"css": ["content.css"],
+		"run_at": "document_idle"	// Default value, runs between "document_end" and window.onload event.
+	}],
+	"permissions":
+	[
+		"storage",
+		"<all_urls>"
+	]
+}

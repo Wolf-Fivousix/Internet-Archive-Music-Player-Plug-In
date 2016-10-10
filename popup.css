@@ -1,0 +1,125 @@
+/*
+ * This file does the styling for the popup.html file.
+ * Items are declared in the same order they appear on the screen.
+ */
+*
+{
+	position: float;
+	border-radius: 5px;
+	text-align: center;
+}
+body
+{
+	width: 384px;	// 256 + 128
+	background-color: white;
+}
+#backgroundProgressBar
+{
+	background-color: #333333;
+	height: 16px;
+}
+#backgroundProgressBar:hover
+{
+	cursor: pointer;
+}
+#progressBar
+{
+	position: relative; /* progressBar is a child from backgroundProgressBar, so 0px of relative distance means they are exatcly overlaped. */
+	top: 0px;
+	background-color: #0099FF;
+	opacity: 0.5;
+	height: 16px;
+}
+#musicTimer
+{
+	position: absolute; /* Unable to overlap like the progressBar because there is text inside this element */
+	top: 48px;
+	right: 40%;
+	font-weight: bold;
+	color: white;
+}
+#musicTitle
+{
+	height: 20px;
+}
+a:link, a:visited
+{
+    text-decoration: none;
+	color: white;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+a:active
+{
+    text-decoration: underline;
+}
+#archiveButton
+{
+	
+	background-color: #333333;
+	font-weight: bold;
+	border-radius: 20px;
+	margin: auto;
+	width: 100px;
+	height: 18px;
+	margin-bottom: 5px;
+}
+.button
+{
+	width: 20px;
+	height: 20px;
+	border: 2px solid black;
+	margin: 5px 2px 5px 2px;
+}
+.button:active, #importButton:active, #exportButton:active
+{
+	/* Gives a "push down" button effect */
+	position: relative;	
+	top: 2px;
+}
+#playButton
+{
+	background-image: url(Images/playButton.png);
+}
+#muteButton
+{
+	background-image: url(Images/speakerButton.png);
+}
+#previousButton
+{
+	background-image: url(Images/prevButton.png);
+}
+#nextButton
+{
+	background-image: url(Images/nextButton.png);
+}
+#listDiv
+{
+	max-height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-right: 10px;
+	margin-bottom: 10px;
+}
+.musicListingName
+{
+	width: 350px;
+	text-align: left;
+}
+.musicListingDel
+{
+	color: #990000;	/* Dark Red */
+}
+tr:hover
+/* .musicListingName:hover, .musicListingDel:hover */
+{
+	cursor: pointer;
+	font-weight: bold;
+}
+#sharingDiv
+{
+	text-align: left;
+}
+ 
